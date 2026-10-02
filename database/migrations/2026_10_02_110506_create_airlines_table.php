@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Airline;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +18,12 @@ return new class extends Migration
             $table->string('country');
             $table->timestamps();
         });
+
+        /* Rekordok, ha lenne default akkor nem kell*/
+        Airline::create([
+            'name'=>"Nagy Lajos",
+            'country'=>"Budapest"
+        ]);
     }
 
     /**

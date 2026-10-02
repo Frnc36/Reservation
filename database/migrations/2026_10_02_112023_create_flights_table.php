@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Flight;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,6 +19,12 @@ return new class extends Migration
             $table->integer('limit');
             $table->timestamps();
         });
+
+        Flight::create([
+            'date' => "2026-10-02",
+            'airline_id' => "1",
+            'limit' => "111",
+        ]);
     }
 
     /**
