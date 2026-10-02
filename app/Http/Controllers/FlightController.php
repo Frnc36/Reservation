@@ -30,7 +30,8 @@ class FlightController extends Controller
      */
     public function show(Flight $flight)
     {
-        return Flight::find($flight);
+        //return Flight::find($flight);
+        return $flight;
     }
 
     /**
