@@ -15,6 +15,7 @@ Route::put('/flights/{flight}', [FlightController::class, 'update']);
 Route::post('/flights', [FlightController::class, 'store']);
 Route::delete('/flights/{flight}', [FlightController::class, 'destroy']);
 
+/* http://127.0.0.1:8000/api/users */
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/users/{user}', [UserController::class, 'show']);
 Route::put('/users/{user}', [UserController::class, 'update']);
